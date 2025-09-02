@@ -1,1 +1,166 @@
-# TESTING_n8n
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Dental Profesional</title>
+    <meta name="description" content="Clínica dental profesional con los mejores tratamientos odontológicos">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+    
+    <style>
+        /* ... [Aquí va todo tu CSS tal cual lo tenías] ... */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                Clínica Dental 
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Cuidado Dental de Excelencia</h1>
+                    <p>Ofrecemos tratamientos odontológicos de alta calidad con tecnología moderna y un equipo profesional comprometido con su salud bucal.</p>
+                    <div>
+                        <a href="#contacto" class="btn btn-primary">Solicitar Cita</a>
+                        <button onclick="openTawkChat()" class="btn btn-outline">Consulta Online</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Clínica dental moderna" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Odontología General</h3>
+                    <p>Tratamientos preventivos y curativos para mantener la salud de sus dientes y encías.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Estética Dental</h3>
+                    <p>Blanqueamientos, carillas y diseño de sonrisa para mejorar la apariencia de sus dientes.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ortodoncia</h3>
+                    <p>Corrección de la posición dental con brackets tradicionales y alineadores invisibles.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Implantología</h3>
+                    <p>Reemplazo de dientes perdidos con implantes de titanio de alta calidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Equipo dental profesional" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2>Profesionales Comprometidos</h2>
+                    <p>Nuestro equipo está formado por odontólogos especializados con amplia experiencia en diferentes áreas de la odontología.</p>
+                    <p>Utilizamos tecnología de vanguardia y los mejores materiales para garantizar tratamientos efectivos y duraderos.</p>
+                    <p>Nos enfocamos en brindar un servicio personalizado, cómodo y de confianza para todos nuestros pacientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Información de Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Dirección</h3>
+                    <p>Calle Principal 123<br>28001 Madrid, España</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Teléfono</h3>
+                    <p>+34 91 123 45 67</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p>contacto@clinicadental.es</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Horario</h3>
+                    <p>Lunes a Viernes: 9:00 - 20:00<br>Sábados: 9:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Button -->
+    <button class="chat-button" onclick="openTawkChat()">
+        Consultar Ahora
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Clínica Dental Profesional. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/68b5b36d624c6a192661d34e/1j42s9p5r';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+
+        // Function to open Tawk.to chat
+        function openTawkChat() {
+            if (typeof Tawk_API !== 'undefined') {
+                Tawk_API.maximize();
+            } else {
+                alert('El sistema de chat se está cargando. Por favor, espere unos segundos.');
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
