@@ -9,6 +9,9 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
     
+    <!-- n8n Chat CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
     <style>
         /* ... [Aquí va todo tu CSS tal cual lo tenías] ... */
     </style>
@@ -38,7 +41,7 @@
                     <p>Ofrecemos tratamientos odontológicos de alta calidad con tecnología moderna y un equipo profesional comprometido con su salud bucal.</p>
                     <div>
                         <a href="#contacto" class="btn btn-primary">Solicitar Cita</a>
-                        <button onclick="openTawkChat()" class="btn btn-outline">Consulta Online</button>
+                        <button onclick="openN8nChat()" class="btn btn-outline">Consulta Online</button>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -115,11 +118,6 @@
         </div>
     </section>
 
-    <!-- Chat Button -->
-    <button class="chat-button" onclick="openTawkChat()">
-        Consultar Ahora
-    </button>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -127,28 +125,22 @@
         </div>
     </footer>
 
-    <!-- Tawk.to Script -->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/68b5b36d624c6a192661d34e/1j42s9p5r';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
+    <!-- n8n Chat Script -->
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-        // Function to open Tawk.to chat
-        function openTawkChat() {
-            if (typeof Tawk_API !== 'undefined') {
-                Tawk_API.maximize();
-            } else {
-                alert('El sistema de chat se está cargando. Por favor, espere unos segundos.');
-            }
+        const chat = createChat({
+            webhookUrl: 'https://pabloworlfow.app.n8n.cloud/webhook/2b10eaed-6595-4433-9f7f-0d2cabe61531/chat'
+        });
+
+        // Optional: function to trigger chat open on button click
+        function openN8nChat() {
+            chat.open();
         }
+    </script>
 
-        // Smooth scrolling for navigation links
+    <!-- Smooth scrolling for navigation links -->
+    <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -164,3 +156,4 @@
     </script>
 </body>
 </html>
+
